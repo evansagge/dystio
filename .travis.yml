@@ -2,8 +2,4 @@ language: ruby
 rvm:
   - 2.1.2
 notifications:
-  irc:
-    channels:
-      - "chat.freenode.net#dystio"
-    skip_join: true
-    use_notice: true
+  irc: "chat.freenode.net#dystio"

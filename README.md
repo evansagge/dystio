@@ -13,6 +13,12 @@ A CLI and Chef plugin for using key-value stores like [consul][consul], [etcd][e
 [etcd]: https://github.com/coreos/etcd
 [s3]: http://aws.amazon.com/s3/
 
+## Inspired by
+
+* [chef-vault](https://github.com/Nordstrom/chef-vault)
+* [citadel](https://github.com/poise/citadel)
+* [etcd-chef](https://github.com/coderanger/etcd-chef)
+
 ## Installation
 
 Add this line to your application's Gemfile:

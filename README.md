@@ -37,6 +37,19 @@ Or install it yourself as:
 
 TODO: Write usage instructions here
 
+## Documentation
+
+See the [wiki](https://github.com/dystio/dystio/wiki) for full documentation, including detailed information and examples on using Dystio with the key/value stores that it supports.
+
+See the [YARD documentation](http://rdoc.info/github/dystio/dystio) for the latest API documentation.
+
+## Support
+
+* [GitHub Issues](https://github.com/dystio/dystio/issues)
+* Google Group: [Dystio](https://groups.google.com/forum/#!forum/dystio)
+* IRC: [#dystio](irc://chat.freenode.net/dystio)
+* Twitter: [@dystio](https://twitter.com/dystio)
+
 ## Contributing
 
 1. Fork it ( https://github.com/dystio/dystio/fork )

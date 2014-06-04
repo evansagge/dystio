@@ -1,6 +1,6 @@
 # Dystio
 
-[![Version](https://img.shields.io/gem/v/dystio.svg)](https://rubygems.org/gems/dystio)
+[![Gem Version](https://badge.fury.io/rb/dystio.svg)](http://badge.fury.io/rb/dystio)
 [![Dependency Status](https://gemnasium.com/dystio/dystio.svg)](https://gemnasium.com/dystio/dystio)
 [![Build Status](https://travis-ci.org/dystio/dystio.svg?branch=master)](https://travis-ci.org/dystio/dystio)
 [![Code Climate](http://img.shields.io/codeclimate/github/dystio/dystio.svg)](https://codeclimate.com/github/dystio/dystio)

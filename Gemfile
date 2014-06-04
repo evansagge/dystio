@@ -16,3 +16,7 @@ group :test do
   gem 'rspec', '~> 3.0.0'
   gem 'simplecov', '~> 0.8.2'
 end
+
+group :release do
+  gem 'gemcutter', '~> 0.7'
+end

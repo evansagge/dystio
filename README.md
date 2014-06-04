@@ -4,7 +4,7 @@
 [![Dependency Status](https://img.shields.io/gemnasium/dystio/dystio.svg)](https://gemnasium.com/dystio/dystio)
 [![Build Status](https://img.shields.io/travis/dystio/dystio/master.svg)](https://travis-ci.org/dystio/dystio)
 [![Code Climate](https://img.shields.io/codeclimate/github/dystio/dystio.svg)](https://codeclimate.com/github/dystio/dystio)
-[![Coverage Status](https://img.shields.io/coveralls/dystio/dystio/master.svg)](https://coveralls.io/r/dystio/dystio)
+[![Coverage Status](https://img.shields.io/coveralls/dystio/dystio.svg)](https://coveralls.io/r/dystio/dystio?branch=master)
 [![Inline docs](http://inch-ci.org/github/dystio/dystio.svg)](http://inch-ci.org/github/dystio/dystio)
 
 A CLI and Chef plugin for using key-value stores like [consul][consul], [etcd][etcd], and [S3][s3].

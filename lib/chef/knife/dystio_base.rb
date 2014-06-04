@@ -12,21 +12,20 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-require 'simplecov'
-require 'coveralls'
-
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter,
-  Coveralls::SimpleCov::Formatter
-]
-SimpleCov.start do
-  add_filter '.gems'
-  add_filter 'spec'
-  add_filter 'vendor'
-end
-
+require 'chef/knife'
 require 'dystio'
 
-require 'chef'
-require 'chef/knife/dystio_base'
-require 'chef/knife/dystio_setup'
+class Chef # :nodoc:
+  class Knife # :nodoc:
+    # Base mixin for Dystio knife commands.
+    module DystioBase
+      def self.included(includer)
+        includer.class_eval do
+          deps do
+            require 'dystio'
+          end
+        end
+      end
+    end
+  end
+end

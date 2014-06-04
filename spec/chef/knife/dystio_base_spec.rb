@@ -12,21 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-require 'simplecov'
-require 'coveralls'
+require 'spec_helper'
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter,
-  Coveralls::SimpleCov::Formatter
-]
-SimpleCov.start do
-  add_filter '.gems'
-  add_filter 'spec'
-  add_filter 'vendor'
+describe Chef::Knife::DystioBase do
 end
-
-require 'dystio'
-
-require 'chef'
-require 'chef/knife/dystio_base'
-require 'chef/knife/dystio_setup'

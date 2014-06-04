@@ -13,6 +13,7 @@ end
 
 group :test do
   gem 'aruba', '~> 0.5.4'
+  gem 'coveralls', '~> 0.7.0'
   gem 'rspec', '~> 3.0.0'
   gem 'simplecov', '~> 0.8.2'
 end

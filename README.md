@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/gem/v/dystio.svg)](https://rubygems.org/gems/dystio)
 [![Dependency Status](https://gemnasium.com/dystio/dystio.svg)](https://gemnasium.com/dystio/dystio)
 [![Build Status](https://travis-ci.org/dystio/dystio.svg?branch=master)](https://travis-ci.org/dystio/dystio)
-[![Code Climate](https://img.shields.io/codeclimate/github/dystio/dystio.svg)](https://codeclimate.com/github/dystio/dystio)
+[![Code Climate](http://img.shields.io/codeclimate/github/dystio/dystio.svg)](https://codeclimate.com/github/dystio/dystio)
 [![Coverage Status](https://img.shields.io/coveralls/dystio/dystio.svg)](https://coveralls.io/r/dystio/dystio?branch=master)
 [![Inline docs](http://inch-ci.org/github/dystio/dystio.svg)](http://inch-ci.org/github/dystio/dystio)
 

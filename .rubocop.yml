@@ -1,0 +1,9 @@
+AllCops:
+  Exclude:
+    - .gems/**/*
+
+Style/Documentation:
+  Enabled: false
+
+Style/LineLength:
+  Max: 140

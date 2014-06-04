@@ -1,0 +1,12 @@
+--asset docs/images:images
+--charset utf-8
+--embed-mixin ClassMethods
+--markup markdown
+--no-private
+--quiet
+--protected
+--readme README.md
+lib/**/*.rb
+-
+CHANGELOG.md
+LICENSE.txt

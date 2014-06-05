@@ -37,7 +37,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+See the [API documentation](https://github.com/dystio/dystio/wiki/API) for full usage information.
+
+TODO: Write abbreviated usage instructions here
 
 ## Documentation
 
@@ -54,11 +56,7 @@ See the [YARD documentation](http://rdoc.info/github/dystio/dystio) for the late
 
 ## Contributing
 
-1. Fork it (https://github.com/dystio/dystio/fork)
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+See the [Contribution guidelines](https://github.com/dystio/dystio/wiki/Development#contributing) in the wiki.
 
 ## License
 

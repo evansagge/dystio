@@ -21,15 +21,13 @@ Gem::Specification.new do |spec|
   spec.version       = Dystio::VERSION
   spec.authors       = ['Tony Burns']
   spec.email         = ['tony@tabolario.com']
-  spec.summary       = 'A CLI and Chef plugin for using key-value stores like consul, etcd, and S3.'
+  spec.summary       = 'A uniform API and CLI for using key-value stores like consul, etcd, and S3.'
   spec.description   = spec.summary
-  spec.homepage      = 'https://dystio.github.io'
+  spec.homepage      = 'https://dyst.io'
   spec.license       = 'Apache 2.0'
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(/^bin\//) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(/^(spec|features)\//)
   spec.require_paths = ['lib']
-
-  spec.add_dependency 'chef', '~> 11.12.0'
 end

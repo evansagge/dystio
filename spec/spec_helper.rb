@@ -26,7 +26,3 @@ SimpleCov.start do
 end
 
 require 'dystio'
-
-require 'chef'
-require 'chef/knife/dystio_base'
-require 'chef/knife/dystio_setup'

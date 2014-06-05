@@ -7,7 +7,7 @@
 [![Coverage Status](https://img.shields.io/coveralls/dystio/dystio.svg)](https://coveralls.io/r/dystio/dystio?branch=master)
 [![Inline docs](http://inch-ci.org/github/dystio/dystio.svg)](http://inch-ci.org/github/dystio/dystio)
 
-A CLI and Chef plugin for using key-value stores like [consul][consul], [etcd][etcd], and [S3][s3].
+A uniform API and CLI for using key-value stores like [consul][consul], [etcd][etcd], and [S3][s3].
 
 [consul]: http://www.consul.io/
 [etcd]: https://github.com/coreos/etcd

@@ -30,4 +30,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(/^bin\//) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(/^(spec|features)\//)
   spec.require_paths = ['lib']
+
+  spec.add_dependency 'faraday', '~> 0.9', '>= 0.9.0'
+  spec.add_dependency 'faraday_middleware', '~> 0.9', '>= 0.9.1'
 end

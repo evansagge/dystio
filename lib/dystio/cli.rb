@@ -12,5 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-require 'aruba/cucumber'
-require 'dystio'
+require 'thor'
+
+module Dystio
+  # The Dystio CLI application
+  class CLI < Thor
+    desc 'version', 'Prints Dystio version information'
+    def version
+      puts "#{ARGV[0]} #{Dystio::VERSION}"
+    end
+    map %w(-v --version) => :version
+  end
+end

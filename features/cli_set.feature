@@ -1,0 +1,1 @@
+Feature: CLI set command

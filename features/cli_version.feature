@@ -1,4 +1,4 @@
-Feature: CLI version
+Feature: CLI version command
 
   Scenario: Displaying the Dystio version
     When I run `dystio --version`

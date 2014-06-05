@@ -19,6 +19,7 @@ A uniform API and CLI for using key-value stores like [consul][consul], [etcd][e
 * [citadel](https://github.com/poise/citadel)
 * [confd](https://github.com/kelseyhightower/confd)
 * [etcd-chef](https://github.com/coderanger/etcd-chef)
+* [fog](https://github.com/fog/fog)
 
 ## Installation
 

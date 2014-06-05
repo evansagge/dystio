@@ -6,6 +6,7 @@
 [![Code Climate](https://img.shields.io/codeclimate/github/dystio/dystio.svg)](https://codeclimate.com/github/dystio/dystio)
 [![Coverage Status](https://img.shields.io/coveralls/dystio/dystio.svg)](https://coveralls.io/r/dystio/dystio?branch=master)
 [![Inline docs](http://inch-ci.org/github/dystio/dystio.svg)](http://inch-ci.org/github/dystio/dystio)
+[![Waffle.io](https://badge.waffle.io/dystio/dystio.svg?label=waffle:ready)](https://waffle.io/dystio/dystio)
 
 A uniform API and CLI for using key-value stores like [consul][consul], [etcd][etcd], and [S3][s3].
 

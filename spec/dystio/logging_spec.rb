@@ -68,20 +68,6 @@ describe Dystio::Logging do
     end
   end
 
-  describe '.logger=' do
-    subject { described_class.logger }
-
-    let(:logger) { Logger.new('/dev/null') }
-
-    before do
-      described_class.logger = logger
-    end
-
-    it 'sets the singleton logger' do
-      expect(subject).to eql(logger)
-    end
-  end
-
   describe '#logger' do
     subject { includer_class.new }
 

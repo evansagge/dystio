@@ -18,25 +18,25 @@ require 'time'
 module Dystio
   # Provides the logging facility used throughout the rest of the API.
   module Logging
-    # The default log formatter used for all logs from the API.
+    # The default log formatter used for all logs.
     class PrettyFormatter < Logger::Formatter
-      # Output a log event as text
-      def call(severity, time, program_name, message)
+      # Returns a log event formatted as human-readable text
+      def call(severity, time, _, message)
         "#{time.utc.iso8601} PID-#{Process.pid} TID-#{Thread.current.object_id.to_s(36)} #{severity}: #{message}"
       end
     end
 
-    # Returns the singleton logger used for all API logs
-    def self.logger
-      @logger ||= Logger.new(STDOUT).tap do |logger|
-        logger.level = Logger::INFO
-        logger.formatter = Dystio::Logging::PrettyFormatter.new
-      end
-    end
+    class << self
+      # Sets the singleton logger
+      attr_writer :logger
 
-    # Sets the singleton logger
-    def self.logger=(logger)
-      @logger = logger
+      # Returns the singleton logger
+      def logger
+        @logger ||= Logger.new(STDOUT).tap do |logger|
+          logger.level = Logger::INFO
+          logger.formatter = Dystio::Logging::PrettyFormatter.new
+        end
+      end
     end
 
     # Fetches the singleton logger

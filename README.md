@@ -41,6 +41,62 @@ See the [API documentation](https://github.com/dystio/dystio/wiki/API) for full 
 
 TODO: Write abbreviated usage instructions here
 
+## Watcher DSL
+
+Dystio's watcher is configured with a Ruby DSL.
+
+### supervisor
+
+The `supervisor` directive is the top-level construct in the watcher DSL. It activates and configures an instance of a Dystio plugin.
+
+```ruby
+supervisor :chef
+```
+
+### watch
+
+The `watch` directive is used inside of a `supervisor` configuration to declare a path within a key-value store that should be watched for changes.
+
+```ruby
+supervisor :chef do
+  watch '/health/service/redis?passing=true', provider: :consul, method: :poll, interval: 10.seconds
+end
+```
+
+## Built-in supervisors
+
+### chef
+
+The `chef` supervisor allows you to initiate a `chef-client` run when watched values change in a key-value store.
+
+```ruby
+supervisor :chef do
+end
+```
+
+### chef_solo
+
+The `chef_solo` supervisor allows you to initiate a `chef-solo` run when watched values change in a key-value store.
+
+```ruby
+supervisor :chef_solo do
+end
+```
+
+### template
+
+The `template` supervisor allows you to update the contents of a file from a template when watched values change in a key-value store.
+
+```ruby
+supervisor :template, source_filename: '/etc/dystio/templates/nginx.conf.erb', destination_filename: '/etc/nginx/nginx.conf' do
+  watch '/health/service/my_app?passing=true', provider: :consul, method: :poll, interval: 10.seconds
+
+  after :run do
+    shell('service nginx reload')
+  end
+end
+```
+
 ## Documentation
 
 See the [wiki](https://github.com/dystio/dystio/wiki) for full documentation, including detailed information and examples on using Dystio with the key/value stores that it supports.

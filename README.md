@@ -67,7 +67,7 @@ end
 
 ### chef
 
-The `chef` supervisor allows you to initiate a `chef-client` run when watched values change in a key-value store.
+The `chef` supervisor allows you to initiate a `chef-client` run when watched values change in a provider.
 
 ```ruby
 supervisor :chef do
@@ -76,16 +76,26 @@ end
 
 ### chef_solo
 
-The `chef_solo` supervisor allows you to initiate a `chef-solo` run when watched values change in a key-value store.
+The `chef_solo` supervisor allows you to initiate a `chef-solo` run when watched values change in a provider.
 
 ```ruby
 supervisor :chef_solo do
 end
 ```
 
+### shell
+
+The `shell` supervisor allows you to run a shell script when watched values change in a provider. The shell command is processed with ERB first, and all of Dystio's template DSL methods are available.
+
+```ruby
+supervisor :shell, command: 'echo "<%= etcd('/message') %>"' do
+  watch '/kv/message', provider: :consul, method: :poll, interval: 10.seconds
+end
+```
+
 ### template
 
-The `template` supervisor allows you to update the contents of a file from a template when watched values change in a key-value store.
+The `template` supervisor allows you to update the contents of a file from a template when watched values change in a provider.
 
 ```ruby
 supervisor :template, source_filename: '/etc/dystio/templates/nginx.conf.erb', destination_filename: '/etc/nginx/nginx.conf' do

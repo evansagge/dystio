@@ -16,6 +16,7 @@ group :test do
   gem 'coveralls', '~> 0.7.0'
   gem 'rspec', '~> 3.0.0'
   gem 'simplecov', '~> 0.8.2'
+  gem 'webmock', '~> 1.18.0'
 end
 
 group :release do

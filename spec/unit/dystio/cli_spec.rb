@@ -18,6 +18,17 @@ require 'dystio/cli'
 describe Dystio::CLI do
   subject { described_class.new(arguments) }
 
+  describe '#checkconfig' do
+    let(:arguments) { [] }
+
+    it 'runs an instance of the checkconfig command' do
+      checkconfig_command = class_double('Dystio::Commands::CheckConfig')
+      stub_const('Dystio::Commands::CheckConfig', checkconfig_command)
+      expect(checkconfig_command).to receive(:call).with(anything)
+      subject.invoke(:checkconfig)
+    end
+  end
+
   describe '#delete' do
     let(:arguments) { %w(/path/to/key) }
 

@@ -23,6 +23,16 @@ module Dystio
 
     default_task :watch
 
+    desc 'checkconfig', 'Validates the configuration file'
+    # Executes the checkconfig command.
+    #
+    # @see Dystio::Commands::CheckConfig
+    #
+    def checkconfig
+      require 'dystio/commands/check_config'
+      Dystio::Commands::CheckConfig.call(options)
+    end
+
     desc 'delete PATH', 'Deletes a directory or key from the store'
     # Executes the delete command.
     #

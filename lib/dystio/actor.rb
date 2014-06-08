@@ -36,6 +36,7 @@ module Dystio
       end
 
       def after(_)
+        yield
       end
 
       def alive?

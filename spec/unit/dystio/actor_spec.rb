@@ -37,8 +37,8 @@ describe Dystio::Actor do
         expect(subject.current_actor).to be(subject)
       end
 
-      it 'responds to after' do
-        expect { subject.after('something') }.not_to raise_error
+      it 'yields for #after' do
+        expect { |block| subject.after(10, &block) }.to yield_with_no_args
       end
 
       it 'returns true for alive if @dead is undefined' do

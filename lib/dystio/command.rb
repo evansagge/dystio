@@ -23,7 +23,7 @@ module Dystio
     #
     # @param [Hash] options additional options passed from the CLI.
     #
-    # @see {Dystio::CLI}
+    # @see Dystio::CLI for global options.
     #
     def initialize(options = {})
       @options = options

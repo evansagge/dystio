@@ -18,6 +18,10 @@ require 'dystio/commands'
 module Dystio
   module Commands
     # Fetches a list of keys in a directory from the store.
+    #
+    # @see Dystio::CLI for global options.
+    # @see Dystio::CLI#list for command-specific options.
+    #
     class List < Dystio::Command
       # Initializes an instance of the command with the specified path and options.
       #

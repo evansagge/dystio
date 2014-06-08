@@ -16,6 +16,7 @@ require 'thor'
 
 require 'dystio/logging'
 
+# rubocop:disable ClassLength
 module Dystio
   # The Dystio CLI application
   class CLI < Thor
@@ -24,37 +25,61 @@ module Dystio
     default_task :watch
 
     desc 'delete PATH', 'Deletes a directory or key from the store'
-    def delete(path) # :nodoc:
+    # Executes the delete command.
+    #
+    # @see Dystio::Commands::Delete
+    #
+    def delete(path)
       require 'dystio/commands/delete'
       Dystio::Commands::Delete.call(path, options)
     end
 
     desc 'get PATH', 'Fetches the value of a key from the store'
-    def get(path) # :nodoc:
+    # Executes the get command.
+    #
+    # @see Dystio::Commands::Get
+    #
+    def get(path)
       require 'dystio/commands/get'
       Dystio::Commands::Get.call(path, options)
     end
 
     desc 'init PROVIDER', 'Initializes a provider for use with Dystio'
-    def init # :nodoc:
+    # Executes the init command.
+    #
+    # @see Dystio::Commands::Init
+    #
+    def init
       require 'dystio/commands/init'
       Dystio::Commands::Init.call(options)
     end
 
     desc 'list PATH', 'Fetches a list of keys in a directory from the store'
-    def list # :nodoc:
+    # Executes the list command.
+    #
+    # @see Dystio::Commands::List
+    #
+    def list
       require 'dystio/commands/list'
       Dystio::Commands::List.call(options)
     end
 
     desc 'set PATH VALUE', 'Sets the value of a key in the store'
-    def set(path, value) # :nodoc:
+    # Executes the set command.
+    #
+    # @see Dystio::Commands::Set
+    #
+    def set(path, value)
       require 'dystio/commands/set'
       Dystio::Commands::Set.call(path, value, options)
     end
 
     desc 'watch', 'Watches for changes at the specified path in the store'
-    def watch # :nodoc:
+    # Executes the watch command.
+    #
+    # @see Dystio::Commands::Watch
+    #
+    def watch
       require 'dystio/commands/watch'
       Dystio::Commands::Watch.call(options)
     end
@@ -66,3 +91,4 @@ module Dystio
     map %w(-v --version) => :version
   end
 end
+# rubocop:enable ClassLength

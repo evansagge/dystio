@@ -18,6 +18,10 @@ require 'dystio/commands'
 module Dystio
   module Commands
     # Initializes a key/value store for use with Dystio.
+    #
+    # @see Dystio::CLI for global options.
+    # @see Dystio::CLI#init for command-specific options.
+    #
     class Init < Dystio::Command
       # Initializes an instance of the command with the specified options.
       #

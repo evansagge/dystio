@@ -73,14 +73,14 @@ describe Dystio::CLI do
     end
   end
 
-  describe '#watch' do
+  describe '#start' do
     let(:arguments) { [] }
 
-    it 'runs an instance of the watch command' do
-      watch_command = class_double('Dystio::Commands::Watch')
-      stub_const('Dystio::Commands::Watch', watch_command)
-      expect(watch_command).to receive(:call).with(anything)
-      subject.invoke(:watch)
+    it 'runs an instance of the start command' do
+      start_command = class_double('Dystio::Commands::Start')
+      stub_const('Dystio::Commands::Start', start_command)
+      expect(start_command).to receive(:call).with(anything)
+      subject.invoke(:start)
     end
   end
 

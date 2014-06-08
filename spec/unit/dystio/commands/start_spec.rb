@@ -13,9 +13,9 @@
 # limitations under the License.
 
 require 'spec_helper'
-require 'dystio/commands/watch'
+require 'dystio/commands/start'
 
-describe Dystio::Commands::Watch do
+describe Dystio::Commands::Start do
   describe '#call' do
   end
 end

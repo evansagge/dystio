@@ -83,14 +83,14 @@ module Dystio
       Dystio::Commands::Set.call(path, value, options)
     end
 
-    desc 'watch', 'Watches for changes at the specified path in the store'
-    # Executes the watch command.
+    desc 'start', 'Starts the watcher'
+    # Executes the start command.
     #
-    # @see Dystio::Commands::Watch
+    # @see Dystio::Commands::Start
     #
-    def watch
-      require 'dystio/commands/watch'
-      Dystio::Commands::Watch.call(options)
+    def start
+      require 'dystio/commands/start'
+      Dystio::Commands::Start.call(options)
     end
 
     desc 'version', 'Prints Dystio version information'

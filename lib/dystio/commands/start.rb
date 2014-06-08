@@ -18,8 +18,8 @@ require 'dystio/commands'
 
 module Dystio
   module Commands
-    # Runs the watcher against the store.
-    class Watch < Dystio::Command
+    # Starts the watcher process.
+    class Start < Dystio::Command
       # Initializes an instance of the command with the specified options.
       def initialize(options = {})
         super(options)

@@ -12,19 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-require 'dystio/commands/base'
+require 'dystio/command'
+require 'dystio/commands'
 
 module Dystio
   module Commands
     # Fetches the value of a key from the store.
-    class Get < Base
+    class Get < Dystio::Command
       def initialize(path, options = {})
         super(options)
         @path = path
-      end
-
-      def self.call(path, options = {})
-        new(path, options).call
       end
 
       def call

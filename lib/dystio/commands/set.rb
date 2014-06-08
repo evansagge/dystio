@@ -12,20 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-require 'dystio/commands/base'
+require 'dystio/command'
+require 'dystio/commands'
 
 module Dystio
   module Commands
     # Sets a key in the store.
-    class Set < Base
+    class Set < Dystio::Command
       def initialize(path, value, options = {})
         super(options)
         @path = path
         @value = value
-      end
-
-      def self.call(path, value, options = {})
-        new(path, value, options).call
       end
 
       def call

@@ -12,15 +12,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-require 'spec_helper'
-require 'dystio/commands/base'
+require 'dystio/logging'
 
-describe Dystio::Commands::Base do
-  subject { described_class.new({}) }
+module Dystio
+  # Abstract class that provides base functionality for command classes.
+  class Command
+    include Dystio::Logging
 
-  describe '#call' do
-    it 'raises a NotImplementedError' do
-      expect { subject.call }.to raise_error(NotImplementedError)
+    def initialize(options = {})
+      @options = options
     end
+
+    def self.call(*args)
+      new(*args).call
+    end
+
+    def call
+      fail NotImplementedError
+    end
+
+    protected
+
+    attr_reader :options
   end
 end

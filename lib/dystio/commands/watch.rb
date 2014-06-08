@@ -12,18 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-require 'dystio/commands/base'
+require 'dystio/command'
+require 'dystio/commands'
 
 module Dystio
   module Commands
     # Runs the watcher against the store.
-    class Watch < Base
+    class Watch < Dystio::Command
       def initialize(options = {})
         super(options)
-      end
-
-      def self.call(options = {})
-        new(options).call
       end
 
       def call

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 module Dystio
-  # Namespace for CLI commands.
+  # Namespace for CLI command classes.
   module Commands
   end
 end

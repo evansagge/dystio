@@ -12,16 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 require 'dystio/command'
 require 'dystio/commands'
 
 module Dystio
   module Commands
     # Sets a key in the store.
-    #
-    # @see Dystio::CLI for global options.
-    # @see Dystio::CLI#set for command-specific options.
-    #
     class Set < Dystio::Command
       # Initializes an instance of the command with the specified path, value, and options.
       #

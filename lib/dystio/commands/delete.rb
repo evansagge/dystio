@@ -12,16 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 require 'dystio/command'
 require 'dystio/commands'
 
 module Dystio
   module Commands
     # Deletes a directory or key from the store.
-    #
-    # @see Dystio::CLI for global options.
-    # @see Dystio::CLI#delete for command-specific options.
-    #
     class Delete < Dystio::Command
       # Initializes an instance of the command with the specified path and options.
       #

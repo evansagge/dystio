@@ -12,16 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 require 'dystio/command'
 require 'dystio/commands'
 
 module Dystio
   module Commands
     # Fetches the value of a key from the store.
-    #
-    # @see Dystio::CLI for global options.
-    # @see Dystio::CLI#get for command-specific options.
-    #
     class Get < Dystio::Command
       # Initializes an instance of the command with the specified path and options.
       #

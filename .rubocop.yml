@@ -7,3 +7,7 @@ Style/Documentation:
 
 Style/LineLength:
   Max: 140
+
+Style/EmptyLines:
+  Exclude:
+    - lib/**/*

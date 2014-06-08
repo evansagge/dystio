@@ -12,7 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# The top-level namespace for Dystio.
-module Dystio # :nodoc:
+
+module Dystio
+  # @private
   VERSION = '0.0.1'
 end

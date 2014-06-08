@@ -12,13 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-require 'thor'
 
+require 'thor'
 require 'dystio/logging'
 
-# rubocop:disable ClassLength
 module Dystio
-  # The Dystio CLI application
+  # The Dystio CLI application.
   class CLI < Thor
     include Dystio::Logging
 
@@ -85,10 +84,9 @@ module Dystio
     end
 
     desc 'version', 'Prints Dystio version information'
-    def version # :nodoc:
+    def version # @private
       puts "#{ARGV[0]} #{Dystio::VERSION}"
     end
     map %w(-v --version) => :version
   end
 end
-# rubocop:enable ClassLength

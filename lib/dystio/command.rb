@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 require 'dystio/logging'
 
 module Dystio
@@ -23,8 +24,6 @@ module Dystio
     #
     # @param [Hash] options additional options passed from the CLI.
     #
-    # @see Dystio::CLI for global options.
-    #
     def initialize(options = {})
       @options = options
     end
@@ -32,6 +31,7 @@ module Dystio
     # Creates an instance of the command and executes it.
     #
     # @param [Array] args arguments to pass to the command.
+    #
     def self.call(*args)
       new(*args).call
     end

@@ -25,6 +25,8 @@ SimpleCov.start do
   add_filter 'vendor'
 end
 
+$TESTING = true # rubocop:disable GlobalVars
+
 require 'dystio'
 
 RSpec.configure do |config|

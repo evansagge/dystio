@@ -12,16 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 require 'dystio/command'
 require 'dystio/commands'
 
 module Dystio
   module Commands
     # Runs the watcher against the store.
-    #
-    # @see Dystio::CLI for global options.
-    # @see Dystio::CLI#watch for command-specific options.
-    #
     class Watch < Dystio::Command
       # Initializes an instance of the command with the specified options.
       def initialize(options = {})
@@ -30,6 +27,20 @@ module Dystio
 
       # Executes the command.
       def call
+        require_celluloid
+        # Boot the watch system
+        #
+        # Set up signal traps
+        #
+        # Evaluate the configuration file
+        #
+        # Start all supervisors
+      end
+
+      private
+
+      def require_celluloid
+        require 'celluloid/autostart'
       end
     end
   end

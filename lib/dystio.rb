@@ -12,7 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
 require 'dystio/version'
 
+# The top-level namespace for Dystio.
 module Dystio
 end

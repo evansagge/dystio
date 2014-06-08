@@ -45,12 +45,12 @@ TODO: Write abbreviated usage instructions here
 
 Dystio's watcher is configured with a Ruby DSL.
 
-### supervisor
+### supervise
 
-The `supervisor` directive is the top-level construct in the watcher DSL. It activates and configures an instance of a Dystio plugin.
+The `supervise` directive is the top-level construct in the watcher DSL. It activates and configures an instance of a Dystio plugin.
 
 ```ruby
-supervisor :chef
+supervise :chef
 ```
 
 ### watch
@@ -58,7 +58,7 @@ supervisor :chef
 The `watch` directive is used inside of a `supervisor` configuration to declare a path within a key-value store that should be watched for changes.
 
 ```ruby
-supervisor :chef do
+supervise :chef do
   watch '/health/service/redis?passing=true', provider: :consul, method: :poll, interval: 10.seconds
 end
 ```
@@ -70,7 +70,7 @@ end
 The `chef` supervisor allows you to initiate a `chef-client` run when watched values change in a provider.
 
 ```ruby
-supervisor :chef do
+supervise :chef do
 end
 ```
 
@@ -79,7 +79,7 @@ end
 The `chef_solo` supervisor allows you to initiate a `chef-solo` run when watched values change in a provider.
 
 ```ruby
-supervisor :chef_solo do
+supervise :chef_solo do
 end
 ```
 
@@ -88,7 +88,7 @@ end
 The `shell` supervisor allows you to run a shell script when watched values change in a provider. The shell command is processed with ERB first, and all of Dystio's template DSL methods are available.
 
 ```ruby
-supervisor :shell, command: 'echo "<%= etcd('/message') %>"' do
+supervise :shell, command: 'echo "<%= etcd('/message') %>"' do
   watch '/kv/message', provider: :consul, method: :poll, interval: 10.seconds
 end
 ```
@@ -98,7 +98,7 @@ end
 The `template` supervisor allows you to update the contents of a file from a template when watched values change in a provider.
 
 ```ruby
-supervisor :template, source_filename: '/etc/dystio/templates/nginx.conf.erb', destination_filename: '/etc/nginx/nginx.conf' do
+supervise :template, source_filename: '/etc/dystio/templates/nginx.conf.erb', destination_filename: '/etc/nginx/nginx.conf' do
   watch '/health/service/my_app?passing=true', provider: :consul, method: :poll, interval: 10.seconds
 
   after :run do

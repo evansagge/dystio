@@ -21,6 +21,8 @@ module Dystio
   class CLI < Thor
     include Dystio::Logging
 
+    default_task :watch
+
     desc 'delete PATH', 'Deletes a directory or key from the store'
     def delete(path) # :nodoc:
       require 'dystio/commands/delete'

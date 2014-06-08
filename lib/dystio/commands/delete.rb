@@ -19,11 +19,16 @@ module Dystio
   module Commands
     # Deletes a directory or key from the store.
     class Delete < Dystio::Command
+      # Initializes an instance of the command with the specified path and options.
+      #
+      # @param [String] path the path to the directory or item in the provider.
+      #
       def initialize(path, options = {})
         super(options)
         @path = path
       end
 
+      # Executes the command.
       def call
       end
 

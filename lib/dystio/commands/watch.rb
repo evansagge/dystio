@@ -19,10 +19,12 @@ module Dystio
   module Commands
     # Runs the watcher against the store.
     class Watch < Dystio::Command
+      # Initializes an instance of the command with the specified options.
       def initialize(options = {})
         super(options)
       end
 
+      # Executes the command.
       def call
       end
     end

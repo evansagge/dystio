@@ -19,20 +19,31 @@ module Dystio
   class Command
     include Dystio::Logging
 
+    # Initializes an instance of the command with the specified options.
+    #
+    # @param [Hash] options additional options passed from the CLI.
+    #
+    # @see {Dystio::CLI}
+    #
     def initialize(options = {})
       @options = options
     end
 
+    # Creates an instance of the command and executes it.
+    #
+    # @param [Array] args arguments to pass to the command.
     def self.call(*args)
       new(*args).call
     end
 
+    # Performs the command. Must be implemented in subclasses.
     def call
       fail NotImplementedError
     end
 
     protected
 
+    # Additional options passed to the command.
     attr_reader :options
   end
 end

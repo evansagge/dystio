@@ -19,11 +19,16 @@ module Dystio
   module Commands
     # Fetches a list of keys in a directory from the store.
     class List < Dystio::Command
+      # Initializes an instance of the command with the specified path and options.
+      #
+      # @param [String] path the path to the directory in the provider.
+      #
       def initialize(path, options = {})
         super(options)
         @path = path
       end
 
+      # Executes the command.
       def call
       end
 

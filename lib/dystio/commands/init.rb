@@ -19,10 +19,13 @@ module Dystio
   module Commands
     # Initializes a key/value store for use with Dystio.
     class Init < Dystio::Command
+      # Initializes an instance of the command with the specified options.
+      #
       def initialize(options = {})
         super(options)
       end
 
+      # Executes the command.
       def call
       end
     end

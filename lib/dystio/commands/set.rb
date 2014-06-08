@@ -19,12 +19,18 @@ module Dystio
   module Commands
     # Sets a key in the store.
     class Set < Dystio::Command
+      # Initializes an instance of the command with the specified path, value, and options.
+      #
+      # @param [String] path the path to the item in the provider.
+      # @param [String] value the value to set the item to.
+      #
       def initialize(path, value, options = {})
         super(options)
         @path = path
         @value = value
       end
 
+      # Executes the command.
       def call
       end
 

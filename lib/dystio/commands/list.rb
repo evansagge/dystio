@@ -12,8 +12,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-require 'spec_helper'
-require 'dystio/cli'
+require 'dystio/commands/base'
 
-describe Dystio::CLI do
+module Dystio
+  module Commands
+    # Fetches a list of keys in a directory from the store.
+    class List < Base
+      def initialize(path, options = {})
+        super(options)
+        @path = path
+      end
+
+      def self.call(path, options = {})
+        new(path, options).call
+      end
+
+      def call
+      end
+
+      private
+
+      attr_reader :path
+    end
+  end
 end

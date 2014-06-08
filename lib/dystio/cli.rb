@@ -21,39 +21,40 @@ module Dystio
   class CLI < Thor
     include Dystio::Logging
 
-    desc 'delete <PATH>', 'Deletes the directory or key at the specified path'
+    desc 'delete PATH', 'Deletes a directory or key from the store'
     def delete(path) # :nodoc:
-      logger.info("Deleting directory or key at #{path}")
+      require 'dystio/commands/delete'
+      Dystio::Commands::Delete.call(path, options)
     end
 
-    desc 'get <PATH>', 'Fetches the value of the key at the specified path'
+    desc 'get PATH', 'Fetches the value of a key from the store'
     def get(path) # :nodoc:
-      logger.info("Fetching key from #{path}")
+      require 'dystio/commands/get'
+      Dystio::Commands::Get.call(path, options)
     end
 
-    desc 'init <PROVIDER>', 'Initializes the specified K/V store'
-    def init(provider) # :nodoc:
-      logger.info("Initializing #{provider} provider")
+    desc 'init PROVIDER', 'Initializes a provider for use with Dystio'
+    def init # :nodoc:
+      require 'dystio/commands/init'
+      Dystio::Commands::Init.call(options)
     end
 
-    desc 'list <PATH>', 'Lists keys in the directory at the specified path'
-    def list(path) # :nodoc:
-      logger.info("Listing keys at #{path}")
+    desc 'list PATH', 'Fetches a list of keys in a directory from the store'
+    def list # :nodoc:
+      require 'dystio/commands/list'
+      Dystio::Commands::List.call(options)
     end
 
-    desc 'set <PATH> <VALUE>', 'Sets the value of the key at the specified path'
+    desc 'set PATH VALUE', 'Sets the value of a key in the store'
     def set(path, value) # :nodoc:
-      logger.info("Setting key at #{path} to #{value}")
+      require 'dystio/commands/set'
+      Dystio::Commands::Set.call(path, value, options)
     end
 
-    desc 'setup', 'Creates local configuration'
-    def setup # :nodoc:
-      logger.info('Creating configuration')
-    end
-
-    desc 'watch <PROVIDER> <PATH>', 'Watches the configured provider for changes at the specified path'
-    def watch(provider, path) # :nodoc:
-      logger.info("Watching for change at #{path} for #{provider} provider")
+    desc 'watch', 'Watches for changes at the specified path in the store'
+    def watch # :nodoc:
+      require 'dystio/commands/watch'
+      Dystio::Commands::Watch.call(options)
     end
 
     desc 'version', 'Prints Dystio version information'

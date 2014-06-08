@@ -12,23 +12,22 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-require 'simplecov'
-require 'coveralls'
+require 'dystio/commands/base'
 
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  SimpleCov::Formatter::HTMLFormatter,
-  Coveralls::SimpleCov::Formatter
-]
-SimpleCov.start do
-  add_filter '.gems'
-  add_filter 'spec'
-  add_filter 'vendor'
-end
+module Dystio
+  module Commands
+    # Initializes a key/value store for use with Dystio.
+    class Init < Base
+      def initialize(options = {})
+        super(options)
+      end
 
-require 'dystio'
+      def self.call(options = {})
+        new(options).call
+      end
 
-RSpec.configure do |config|
-  config.mock_with :rspec do |mocks|
-    mocks.verify_doubled_constant_names = true
+      def call
+      end
+    end
   end
 end

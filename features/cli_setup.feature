@@ -1,1 +1,0 @@
-Feature: CLI setup command

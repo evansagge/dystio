@@ -18,7 +18,7 @@ require 'dystio/commands'
 
 module Dystio
   module Commands
-    # Starts the watcher process.
+    # Starts the watcher.
     class Start < Dystio::Command
       # Initializes an instance of the command with the specified options.
       def initialize(options = {})

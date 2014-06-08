@@ -18,7 +18,7 @@ require 'dystio/commands'
 
 module Dystio
   module Commands
-    # Sets a key in the store.
+    # Sets a the value of an item.
     class Set < Dystio::Command
       # Initializes an instance of the command with the specified path, value, and options.
       #

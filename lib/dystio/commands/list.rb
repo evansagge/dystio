@@ -18,7 +18,7 @@ require 'dystio/commands'
 
 module Dystio
   module Commands
-    # Fetches a list of keys in a directory from the store.
+    # Fetches a list of items in a directory.
     class List < Dystio::Command
       # Initializes an instance of the command with the specified path and options.
       #

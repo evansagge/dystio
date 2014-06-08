@@ -23,7 +23,7 @@ module Dystio
 
     default_task :watch
 
-    desc 'checkconfig', 'Validates the configuration file'
+    desc 'checkconfig', "Validates Dystio's configuration file"
     # Executes the checkconfig command.
     #
     # @see Dystio::Commands::CheckConfig
@@ -33,7 +33,7 @@ module Dystio
       Dystio::Commands::CheckConfig.call(options)
     end
 
-    desc 'delete PATH', 'Deletes a directory or key from the store'
+    desc 'delete PATH', 'Deletes a directory or item'
     # Executes the delete command.
     #
     # @see Dystio::Commands::Delete
@@ -43,7 +43,7 @@ module Dystio
       Dystio::Commands::Delete.call(path, options)
     end
 
-    desc 'get PATH', 'Fetches the value of a key from the store'
+    desc 'get PATH', 'Fetches an item'
     # Executes the get command.
     #
     # @see Dystio::Commands::Get
@@ -53,7 +53,7 @@ module Dystio
       Dystio::Commands::Get.call(path, options)
     end
 
-    desc 'init PROVIDER', 'Initializes a provider for use with Dystio'
+    desc 'init', "Generates Dystio's configuration file"
     # Executes the init command.
     #
     # @see Dystio::Commands::Init
@@ -63,7 +63,7 @@ module Dystio
       Dystio::Commands::Init.call(options)
     end
 
-    desc 'list PATH', 'Fetches a list of keys in a directory from the store'
+    desc 'list PATH', 'Fetches a list of items in a directory'
     # Executes the list command.
     #
     # @see Dystio::Commands::List
@@ -73,7 +73,7 @@ module Dystio
       Dystio::Commands::List.call(options)
     end
 
-    desc 'set PATH VALUE', 'Sets the value of a key in the store'
+    desc 'set PATH VALUE', 'Sets the value of an item'
     # Executes the set command.
     #
     # @see Dystio::Commands::Set

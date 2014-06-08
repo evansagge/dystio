@@ -18,7 +18,7 @@ require 'dystio/commands'
 
 module Dystio
   module Commands
-    # Fetches the value of a key from the store.
+    # Fetches an item.
     class Get < Dystio::Command
       # Initializes an instance of the command with the specified path and options.
       #

@@ -1,0 +1,15 @@
+{
+  "watches": [
+    {
+      "provider": "s3",
+      "path": "foo",
+      "bucket": "dystio-s3-examples",
+      "runners": [
+        {
+          "type": "shell",
+          "command": "echo <%= items['foo'] %> > /tmp/foo.txt"
+        }
+      ]
+    }
+  ]
+}

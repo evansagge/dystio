@@ -1,0 +1,8 @@
+watches:
+  - provider: s3
+    path: foo
+    bucket: dystio-s3-examples
+    runners:
+      - type: template
+        source: simple_template.erb
+        destination: /tmp/foo.txt

@@ -12,13 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+require 'spec_helper'
+require 'dystio/runners/noop'
 
-require 'dystio/runner'
-
-module Dystio
-  module Runners
-    # Runner that runs a shell command when watched items change.
-    class Shell < Dystio::Runner
-    end
-  end
+describe Dystio::Runners::Noop do
 end

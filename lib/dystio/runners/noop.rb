@@ -17,8 +17,8 @@ require 'dystio/runner'
 
 module Dystio
   module Runners
-    # Runner that runs a shell command when watched items change.
-    class Shell < Dystio::Runner
+    # Runner that does nothing when watched items change.
+    class Noop < Dystio::Runner
     end
   end
 end

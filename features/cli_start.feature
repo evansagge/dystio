@@ -1,0 +1,1 @@
+Feature: CLI start command

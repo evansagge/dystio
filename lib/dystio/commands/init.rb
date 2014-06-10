@@ -14,7 +14,6 @@
 
 
 require 'dystio/command'
-require 'dystio/commands'
 
 module Dystio
   module Commands
